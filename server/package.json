@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "echo \"Building server...\" && mkdir -p dist && cp -r . dist/",
+    "build": "echo \"Build complete\" && mkdir -p dist && cp index.js dist/",
     "test": "jest"
   },
   "dependencies": {

@@ -18,9 +18,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Clean server node_modules
+        working-directory: ./server
+        run: rm -rf node_modules
+
       - name: Install server dependencies
         working-directory: ./server
-        run: npm install
+        run: npm install --include=dev
 
       - name: Run server tests
         working-directory: ./server
@@ -32,7 +36,7 @@ jobs:
 
       - name: Install client dependencies
         working-directory: ./client
-        run: npm install
+        run: npm install --include=dev
 
       - name: Build client
         working-directory: ./client
